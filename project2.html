@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Débora Dinis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+    <header id="header" style="
+                background-size: cover;
+                background-image: url('images/overlay.png'),
+                    url('images/projects/netflixblur.png');
+            ">
+        <div class="inner">
+            <a href="#" class="image avatar"><img src="images/projects/netflix.png" alt="" /></a>
+            <h1>
+                <strong>
+                    Evolution of Netflix contents (2016-2021)</strong>
+            </h1>
+            <a href="#one" style="color:#ff0000" class="noBorder project2">Goal</a><br />
+            <a href="#two" style="color:#ff0000" class="noBorder project2">Main Questions</a><br />
+            <a href="#three" style="color:#ff0000" class="noBorder project2">Reports</a><br />
+            <a href="#four" style="color:#ff0000" class="noBorder project2">Conclusions</a><br />
+            <a href="#five" style="color:#ff0000" class="noBorder project2">Database Description</a><br />
+            <a href="#six" style="color:#ff0000" class="noBorder project2">Technologies Used</a><br />
+            <a href="#seven" style="color:#ff0000" class="noBorder project2">More Details</a>
+        </div>
+    </header>
+    <!-- Main -->
+    <div id="main">
+        <a href="portfolio.html" class="button big icon solid fa-arrow-left project2" style="margin-bottom: 30px;"> Go
+            back to portfolio</a>
+        <section id="one">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Goal</h2>
+            </header>
+            <p>
+                Netflix is an American subscription video on-demand streaming service and production company. The main
+                goal is to find
+                out how Netflix’s content changed over time (2016-2021) and what content Netflix has available based on
+                rating
+                and category.
+            </p>
+        </section>
+
+        <section id="two">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Main Questions</h2>
+            </header>
+            <ol>
+                <li>Have the proportion between TV shows and movies changed? </li>
+
+                <li>
+                    Is Netflix new content actually new?
+                </li>
+
+                <li>
+                    What are the most popular categories?
+                </li>
+
+                <li>
+                    Does Netflix include contents for every age-group ?
+                </li>
+            </ol>
+        </section>
+        <section id="three">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">
+                    Reports
+                </h2>
+            </header>
+            <h5><i>The following reports are interactive</i></h5>
+            <canvas id="amarelo"></canvas>
+            <canvas id="laranja" style="margin-top: 40px;"></canvas>
+            <button class="button small project2" style="min-width: 6em;background-color: #cbcbcb40;"
+                onclick="reset()">Reset</button>
+            <button class="button small project2" onclick="newDataSet()">Show New</button>
+            <button class="button small project2" onclick="oldDataSet()">Show Old</button>
+            <canvas id="rosa" style="margin-top: 40px;"></canvas>
+            <button class="button small project2" style="min-width: 6em;background-color: #cbcbcb40;"
+                onclick="resetRosa()">Total Shows</button>
+            <button class="button small project2" onclick="movieRosa()">Movies</button>
+            <button class="button small project2" onclick="tvRosa()">TV Shows</button>
+            <canvas id="verde" style="margin-top: 40px;"></canvas>
+            <header class="major underline">
+                <h4 style="margin-bottom: 3px">
+                    More details
+                    <button class="button small project2" onclick="showmoredetailsverde()"
+                        style="float: right; cursor: pointer; font-size: 0.45em;">
+                        show more
+                    </button>
+                </h4>
+            </header>
+            <table id='tabelaverde' style="margin-top: 30px; display:none">
+                <thead>
+                    <tr>
+                        <th>Rating</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TV-G/G</td>
+                        <td>General Audience</td>
+                    </tr>
+                    <tr>
+                        <td>PG/TV-PG</td>
+                        <td>Parental Guidance Suggested</td>
+                    </tr>
+                    <tr>
+                        <td>PG-13/TV-14</td>
+                        <td> Parents Strongly Cautioned</td>
+                    </tr>
+                    <tr>
+                        <td>TV-Y</td>
+                        <td>All Children
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TV-Y7</td>
+                        <td>Directed to Older Children</td>
+                    </tr>
+                    <tr>
+                        <td>TV-Y7-FV</td>
+                        <td>Directed to Older Children - Fantasy Violence</td>
+                    </tr>
+                    <tr>
+                        <td>TV-MA</td>
+                        <td>Contains content that may be unsuitable for children</td>
+                    </tr>
+                    <tr>
+                        <td>NC-17</td>
+                        <td>No children under seventeen admitted</td>
+                    </tr>
+                    <tr>
+                        <td>R</td>
+                        <td>Restricted, Children Under 17 Require Accompanying Parent or Adult Guardian
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>UR/NR</td>
+                        <td>Unrated/ Not Rated
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section id="four">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Conclusions</h2>
+            </header>
+            <ol>
+                <li class="spacedItem">
+                    Netflix has consistently expanded its content offerings over time. A recurring characteristic of its
+                    library is the imbalance between movies and TV shows, as there are always more movies than TV shows
+                    available on the platform.
+                </li>
+                <li class="spacedItem">
+                    The majority of TV shows on Netflix were not added to the platform in the year they were originally
+                    released. The majority of older content on the platform, however, are movies. <br />
+                    The addition of new content to Netflix has seen steady growth until 2020, but there was a noticeable
+                    drop in releases in 2021.
+                </li>
+                <li class="spacedItem">
+                    Netflix offers a diverse range of content, divided into approximately 40 categories. Drama, Comedy,
+                    and Action-Adventure are the most prevalent categories across all content on the platform. However,
+                    if we delve deeper, we find that Documentaries are the third most popular movie category, while
+                    Crime is the third most popular TV show category.
+                </li>
+                <li class="spacedItem">
+                    Netflix provides content for audiences of all ages. However, only 3% of the content is labeled as
+                    suitable for a general audience, indicating that it may not be the ideal platform for those seeking
+                    content specifically for children.
+                </li>
+            </ol>
+        </section>
+        <section id="five">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Database</h2>
+            </header>
+            <ul>
+                <li>
+                    <strong class="subtitle">Database name: </strong>Netflix Movies and TV Shows
+                </li>
+                <li>
+                    <strong class="subtitle">Database description: </strong>Netflix is one of the most popular media and
+                    video streaming platforms. They have over 8000 movies or tv shows available
+                    on their platform, as of mid-2021, they have over 200M Subscribers globally. This tabular dataset
+                    consists of listings
+                    of all the movies and tv shows available on Netflix, along with details such as - <i>cast,
+                        directors, ratings, release
+                        year, duration, etc.</i>
+
+                </li>
+                <li>
+                    <strong class="subtitle">Database Source: </strong>Kaggle
+                </li>
+                <li>
+                    <strong class="subtitle">Database link:
+                    </strong>https://www.kaggle.com/datasets/shivamb/netflix-shows
+                </li>
+                <li>
+                    <strong class="subtitle">Data Structure: </strong>Single
+                    table
+                </li>
+                <li>
+                    <strong class="subtitle"># of records: </strong>8807
+                </li>
+                <li><strong class="subtitle"># of fields: </strong>12</li>
+                <li><strong class="subtitle">Download Date*: </strong>06/02/2023 <i>*(this database is updated and might
+                        have some changes depending on the date)</i></li>
+                <li><strong class="subtitle">File type: </strong>CSV</li>
+            </ul>
+        </section>
+        <!-- One -->
+        <section id="six">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Technologies Used</h2>
+            </header>
+            <div class="technologies">
+                <img class="tec" title="Excel" src="images/tec/excelSVG.svg" />
+                <img class="tec" style="height: 47px" title="ChartJS" src="images/tec/chartjsSVG.SVG.svg" />
+                <img style="height: 47px" class="tec" title="MS SQL" src="images/tec/sql-database-generic.svg" />
+            </div>
+        </section>
+        <section id="seven">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">
+                    More details
+                    <button class="button small project2" onclick="showmoredetails()"
+                        style="float: right; cursor: pointer; font-size: 0.4em;">
+                        show more
+                    </button>
+                </h2>
+            </header>
+            <div id="hiddenDiv" style="display: none">
+                <div style="margin-left: 20px;">
+                    <h5>Data cleaning: </h5>
+                    <ul>
+                        <li>
+                            <strong class="subtitle">MS Excel</strong>
+                        </li>
+                        <p>
+                            Start by removing columns with information that is not relevant for the goal (cast,
+                            director).<br /><strong>Column: <i>show_id</i></strong> <br />Remove 's' from the value in
+                            order
+                            to obtain
+                            an integer <br />
+                            <strong>Column: <i>type_id</i></strong><br />
+                            Using the function IFS substitute the type for it's corresponding type_id<br />
+                            <strong>Column: <i>date_added</i></strong><br />
+                            Change the date format to YYYY-MM-DD in order to be compatible with SQL<br />
+                            <strong>Column: <i>rating_id</i></strong><br />
+                            Select distinct values. Turn distinct values with the same meaning into one value <i>ex:
+                                TV-G/G</i>. Order ratings by age ascending. Create a number key for each
+                            distinct_value(rating_id). Replace each rating
+                            with it's corresponding id.<br />
+                            <strong>Column: <i>duration</i></strong><br />
+                            Sort a copy of the database by type_id. Divide between movies and TV shows. Remove min,
+                            seasons, season from the values. Clean the duration column. Create a column named
+                            no_of_seasons. Copy the values of duration and no of seasons to it's corresponding columns.
+                            Sort by show_id.<br />
+                            <strong>Column: <i>categories</i></strong><br />
+                            Split the listed_in column into the different categories(columns:category1_id, category2_id
+                            and category3_id). Replace the categories by they corresponding value in the categories
+                            table.
+
+                        </p>
+
+                    </ul>
+                    <h5>Database design: </h5>
+                    <a href="images/projects/netflixdiagram.svg" style="width: 100%;" class="image thumb removeBefore"
+                        target="_blank"><img style="width: 100%;" src="images/projects/netflixdiagram.svg" /></a>
+
+
+                    <h5>SQL queries: </h5>
+                    <pre><code>
+        -- select no of shows by type and by year--
+
+            SELECT 
+                YEAR(nt.date_added),
+                t.type_name,
+                COUNT(nt.show_id) 
+            FROM dbo.netflix_titles AS nt
+                LEFT JOIN dbo.types AS t
+                    ON (nt.type_id=t.type_id)
+            GROUP BY 
+                YEAR(nt.date_added),
+                t.type_name
+            ORDER BY 
+                 YEAR(nt.date_added) ASC;
+                        
+                        
+        -- select from all content the amount that was added on its release year --
+                        
+            SELECT
+                YEAR(nt.date_added),
+                t.type_name,
+                COUNT(CASE
+                        WHEN nt.release_year=YEAR(nt.date_added) 
+                            THEN 1 
+                        END) AS new_content,
+                COUNT(nt.show_id) AS total_content		
+            FROM dbo.netflix_titles AS nt
+                LEFT JOIN dbo.types AS t
+                    ON (nt.type_id=t.type_id)
+            GROUP BY 
+                YEAR(nt.date_added),
+                t.type_name
+            ORDER BY 
+                YEAR(nt.date_added) ASC;
+                        
+                        
+        -- select no of movies per category--
+                        
+                        
+            DECLARE @Category INT 
+            SET @Category=1
+            WHILE ( @Category <= 48)
+            BEGIN
+                SELECT
+                    @Category AS category_id,
+                    SUM(CASE 
+                        WHEN category1_id = @Category OR category2_id = @Category 
+                            OR category3_id = @Category  THEN 1 
+                        ELSE 0 
+                        END) AS no_of_movies
+                FROM dbo.netflix_titles
+                WHERE type_id=1
+                SET @Category = @Category + 1
+             END;
+                        
+                        
+        -- select no of tv shows per category--
+                        
+                        
+            DECLARE @Category INT 
+            SET @Category=1
+            WHILE ( @Category <= 48)
+            BEGIN
+                SELECT
+                    @Category AS category_id,
+                    SUM(CASE 
+                        WHEN category1_id = @Category OR category2_id = @Category 
+                            OR category3_id = @Category  THEN 1 
+                        ELSE 0 
+                        END) AS no_of_tvshows
+                FROM dbo.netflix_titles
+                WHERE type_id=2
+                SET @Category = @Category + 1
+            END;
+                            
+                        
+        -- select shows by type,rating and year --
+                        
+            SELECT
+                YEAR(nt.date_added),
+                r.rating,
+                COUNT(CASE 
+                        WHEN nt.type_id=1 THEN 1 END) as no_of_movies,
+                COUNT(CASE 
+                        WHEN nt.type_id=2 THEN 1 END) as no_of_tvshows
+            FROM dbo.netflix_titles AS nt
+                LEFT JOIN dbo.ratings AS r
+                    ON (nt.rating_id=r.ratings_id)
+            GROUP BY 
+                YEAR(nt.date_added),
+                 r.rating
+            ORDER BY 
+                YEAR(nt.date_added) ASC;</code></pre>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/d%C3%A9bora-dinis-12b832258"
+                        class="icon brands fa-linkedin"><span class="label">Twitter</span></a>
+                </li>
+                <li>
+                    <a href="#" onclick="copy()" class="icon solid fa-envelope"><span class="label">Email</span></a>
+                </li>
+                <li>
+                    <a href="cv.pdf" download target="_blank" class="icon solid fa-ambulance"><span class="label">CV</span></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function showmoredetails() {
+            const hiddenDiv = document.getElementById("hiddenDiv");
+            if (hiddenDiv.style.display === "none")
+                hiddenDiv.style.display = "block";
+            else hiddenDiv.style.display = "none";
+        }
+        function showmoredetailsverde() {
+            const hiddenDiv = document.getElementById("tabelaverde");
+            if (hiddenDiv.style.display === "none")
+                hiddenDiv.style.display = "block";
+            else hiddenDiv.style.display = "none";
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('amarelo');
+
+        const labels = [2016, 2017, 2018, 2019, 2020, 2021];
+        const data = {
+            labels: labels,
+            datasets: [
+
+                {
+                    label: 'Movies',
+                    data: [354, 1193, 2430, 3854, 5138, 6131],
+                    borderColor: '#660000',
+                    backgroundColor: '#750000',
+                    fill: true
+                },
+                {
+                    label: 'TV Shows',
+                    data: [223, 572, 984, 1576, 2171, 2676],
+                    borderColor: '#CC0000',
+                    backgroundColor: '#CC0000',
+                    fill: true
+                },
+
+            ]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "Netflix's content through the years",
+                        align: 'start',
+                        color: '#202020',
+                        font: {
+                            size: 30,
+                            family: 'sans-serif',
+
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index'
+                    },
+                },
+                interaction: {
+                    mode: 'nearest',
+                    axis: 'x',
+                    intersect: false
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        title: {
+                            display: true,
+                            text: 'No of shows'
+                        }
+                    }
+                }
+            }
+        };
+        new Chart(ctx, config);
+
+    </script>
+    <script>
+        const ctx2 = document.getElementById('laranja');
+
+
+        const labels2 = [2016, 2017, 2018, 2019, 2020, 2021];
+        const data2 = {
+            labels: labels2,
+            datasets: [
+                {
+                    label: 'New',
+                    data: [129 + 60, 273 + 108, 343 + 218, 379 + 288, 397 + 380, 277 + 312],
+                    backgroundColor: '#750000',
+                },
+                {
+                    label: 'Other',
+                    data: [253 + 176, 839 + 349, 1237 + 412, 1424 + 592, 1284 + 595, 993 + 505],
+                    backgroundColor: '#CC0000',
+                }
+            ]
+        };
+        const dataSetAll = {
+            labels: labels2,
+            datasets: [
+                {
+                    label: 'New Movies',
+                    data: [129, 273, 343, 379, 397, 277],
+                    backgroundColor: '#750000',
+                },
+                {
+                    label: 'New Tv Shows',
+                    data: [60, 108, 218, 288, 380, 312],
+                    backgroundColor: '#CC0000',
+                },
+                {
+                    label: 'Other Movies',
+                    data: [253, 839, 1237, 1424, 1284, 993],
+                    backgroundColor: '#B31E1E',
+                },
+                {
+                    label: 'Other TV Shows',
+                    data: [176, 349, 412, 592, 595, 505],
+                    backgroundColor: '#E64848',
+                },
+            ]
+        };
+        const config2 = {
+            type: 'bar',
+            data: data2,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "New content from Netflix's new relases",
+                        align: 'start',
+                        color: '#202020',
+                        font: {
+                            size: 30,
+                            family: 'sans-serif',
+
+                        }
+                    },
+                },
+                responsive: true,
+                scales: {
+                    x: {
+                        stacked: true,
+                        title: {
+                            display: true,
+                            text: 'Year'
+                        }
+
+                    },
+                    y: {
+                        stacked: true,
+                        title: {
+                            display: true,
+                            text: 'No of Shows'
+                        }
+
+                    }
+                }
+            }
+        };
+
+        const chart = new Chart(ctx2, config2);
+
+        function clickHandler(evt) {
+            const points = chart.getElementsAtEventForMode(evt, 'nearest', { intersect: true }, true);
+            if (points.length) {
+                const firstPoint = points[0];
+                const label = chart.data.datasets[firstPoint.datasetIndex].label
+                if (label === 'Other') {
+                    oldDataSet()
+                }
+
+                if (label === 'New') {
+                    newDataSet()
+                }
+            }
+
+
+        }
+
+        ctx2.onclick = clickHandler;
+
+
+    </script>
+
+    <script>
+
+        function resetRosa() {
+            const labelsrosa2 = ['Drama',
+                'Comedy',
+                'Action-Adventure',
+                'Documentary',
+                'Romance',
+                'Family',
+                'Thriller',
+                'Crime',
+                'Kids',
+                'Horror',
+            ];
+            const datarosa2 = {
+                labels: labelsrosa2,
+                datasets: [
+                    {
+                        label: 'No of shows',
+                        data: [3190,
+                            2374,
+                            978,
+                            918,
+                            740,
+                            641,
+                            634,
+                            470,
+                            451,
+                            432
+                        ],
+                        borderColor: '#750000',
+                        backgroundColor: '#981414'
+                    },
+
+                ]
+            };
+
+            chartRosa.data = datarosa2;
+            chartRosa.update();
+        }
+        function movieRosa() {
+            const labelsrosa2 = ['Drama',
+                'Comedy',
+                'Documentary',
+                'Action-Adventure',
+                'Family',
+                'Thriller',
+                'Romance',
+                'Musical',
+                'Horror',
+                'ScienceFiction & Fantasy'
+
+            ];
+            const datarosa2 = {
+                labels: labelsrosa2,
+                datasets: [
+                    {
+                        label: 'No of Movies',
+                        data: [2427,
+                            1865,
+                            918,
+                            810,
+                            641,
+                            577,
+                            464,
+                            375,
+                            357,
+                            243
+
+                        ],
+                        borderColor: '#AE0101',
+                        backgroundColor: '#CC0000',
+                    },
+
+                ]
+            };
+
+            chartRosa.data = datarosa2;
+            chartRosa.update();
+        }
+
+        function tvRosa() {
+            const labelsrosa2 = ['Drama',
+                'Comedy',
+                'Crime',
+                'Kids',
+                'Docuseries',
+                'Romance',
+                'Reality',
+                'Anime',
+                'Action-Adventure',
+                'Mystery'
+
+            ];
+            const datarosa2 = {
+                labels: labelsrosa2,
+                datasets: [
+                    {
+                        label: 'No of TV Shows',
+                        data: [763,
+                            509,
+                            470,
+                            451,
+                            395,
+                            276,
+                            255,
+                            176,
+                            168,
+                            98
+
+                        ],
+                        borderColor: '#CE2A2A',
+                        backgroundColor: '#E64848',
+                    },
+
+                ]
+            };
+
+            chartRosa.data = datarosa2;
+            chartRosa.update();
+        }
+
+        function oldDataSet() {
+            const dataSetOther = {
+                labels: labels2,
+                datasets: [
+                    {
+                        label: 'Other Movies',
+                        data: [253, 839, 1237, 1424, 1284, 993],
+                        backgroundColor: '#B31E1E',
+                    },
+                    {
+                        label: 'Other TV Shows',
+                        data: [176, 349, 412, 592, 595, 505],
+                        backgroundColor: '#E64848',
+                    },
+                ]
+            };
+            chart.data = dataSetOther;
+            chart.update();
+        }
+        function newDataSet() {
+            const dataSetOther = {
+                labels: labels2,
+                datasets: [
+                    {
+                        label: 'New Movies',
+                        data: [129, 273, 343, 379, 397, 277],
+                        backgroundColor: '#750000',
+                    },
+                    {
+                        label: 'New Tv Shows',
+                        data: [60, 108, 218, 288, 380, 312],
+                        backgroundColor: '#CC0000',
+                    }
+                ]
+            };
+            chart.data = dataSetOther;
+            chart.update();
+        }
+
+        function reset() {
+            const data2 = {
+                labels: labels2,
+                datasets: [
+                    {
+                        label: 'New',
+                        data: [129 + 60, 273 + 108, 343 + 218, 379 + 288, 397 + 380, 277 + 312],
+                        backgroundColor: '#750000',
+                    },
+                    {
+                        label: 'Other',
+                        data: [253 + 176, 839 + 349, 1237 + 412, 1424 + 592, 1284 + 595, 993 + 505],
+                        backgroundColor: '#B31E1E',
+                    }
+                ]
+            };
+
+            chart.data = data2;
+            chart.update();
+        }
+
+
+    </script>
+
+    <script>
+        const ctxverde = document.getElementById('verde');
+
+
+        const labelsverde = ['TV-G/G', 'PG/TV-PG', 'PG-13/TV-14', 'TV-Y', 'TV-Y7', 'TV-Y7-FV', 'TV-MA', 'NC-17', 'R', 'UR/NR'];
+
+        const dataverde = {
+            labels: labelsverde,
+            datasets: [
+                {
+                    label: '2021',
+                    data: [261, 1151, 2650, 307, 334, 6, 3220, 3, 799, 90],
+                    backgroundColor: '#FF6565',
+                    borderColor: '#CC0000',
+                },
+                {
+                    label: '2020',
+                    data: [213, 996, 2178, 250, 247, 6, 2731, 3, 609, 90],
+                    backgroundColor: '#FFC977',
+                    borderColor: '#FF9900',
+                },
+                {
+                    label: '2019',
+                    data: [143, 764, 1617, 148, 192, 6, 2060, 3, 421, 90],
+                    backgroundColor: '#FFB3DA',
+                    borderColor: '#FF66B2',
+                },
+                {
+                    label: '2018',
+                    data: [95, 485, 988, 94, 138, 5, 1324, 2, 213, 84],
+                    backgroundColor: '#BF7FFF',
+                    borderColor: '#7F00FF',
+                },
+                {
+                    label: '2017',
+                    data: [47, 268, 484, 54, 93, 4, 674, 2, 84, 69],
+                    backgroundColor: '#A8D1FF',
+                    borderColor: '#0080FF',
+                },
+                {
+                    label: '2016',
+                    data: [20, 81, 132, 19, 48, 3, 228, 1, 18, 41],
+                    backgroundColor: '#75FF75',
+                    borderColor: '#00CC00',
+                },
+            ]
+        };
+        const configverde = {
+            type: 'line',
+            data: dataverde,
+            options: {
+                responsive: true,
+                scales: {
+                    x: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'Rating'
+                        }
+
+                    },
+                    y: {
+                        display: true,
+                        title: {
+                            display: true,
+                            text: 'No of Shows'
+                        }
+
+                    }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: "Netflix's content by rating through the years ",
+                        align: 'start',
+                        color: '#202020',
+                        font: {
+                            size: 30,
+                            family: 'sans-serif',
+
+                        }
+                    }
+                }
+            },
+        };
+
+        new Chart(ctxverde, configverde)
+    </script>
+    <script>
+        const ctxrosa = document.getElementById('rosa');
+
+
+        const labelsrosa = ['Drama',
+            'Comedy',
+            'Action-Adventure',
+            'Documentary',
+            'Romance',
+            'Family',
+            'Thriller',
+            'Crime',
+            'Kids',
+            'Horror',
+        ];
+        const datarosa = {
+            labels: labelsrosa,
+            datasets: [
+                {
+                    label: 'No of shows',
+                    data: [3190,
+                        2374,
+                        978,
+                        918,
+                        740,
+                        641,
+                        634,
+                        470,
+                        451,
+                        432
+                    ],
+                    borderColor: '#750000',
+                    backgroundColor: '#B31E1E',
+                },
+
+            ]
+        };
+        const configrosa = {
+            type: 'bar',
+            data: datarosa,
+            options: {
+                indexAxis: 'y',
+                // Elements options apply to all of the options unless overridden in a dataset
+                // In this case, we are setting the border of each horizontal bar to be 2px wide
+                elements: {
+                    bar: {
+                        borderWidth: 2,
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false,
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Categories with the most content in 2021',
+                        align: 'start',
+                        color: '#202020',
+                        font: {
+                            size: 30,
+                            family: 'sans-serif',
+
+                        }
+                    },
+
+                }
+            },
+        };
+
+        const chartRosa = new Chart(ctxrosa, configrosa)
+    </script>
+    <script>
+        async function copy(){
+            await navigator.clipboard.writeText("debora.dinis99@gmail.com");
+            alert("Email debora.dinis99@gmail.com copyied to clipboard");
+        }
+    </script>
+</body>
+
+</html>
