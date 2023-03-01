@@ -3262,3 +3262,12 @@ input, select, textarea {
 	border-color: #d40e0e;
     color: #d40e0e!important;
 }
+
+.notSpacedItem{
+	margin-bottom: 0px;
+}
+
+.project3:hover {
+	border-color: #6ab6f3;
+    color: #6ab6f3!important;
+}

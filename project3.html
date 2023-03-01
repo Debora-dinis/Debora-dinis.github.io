@@ -17,37 +17,38 @@
     <header id="header" style="
                 background-size: cover;
                 background-image: url('images/overlay.png'),
-                    url('images/projects/netflixblur.png');
+                    url('images/projects/covidblur.png');
             ">
         <div class="inner">
-            <a href="#" class="image avatar"><img src="images/projects/netflix.png" alt="" /></a>
+            <a href="#" class="image avatar"><img src="images/projects/covid.png" alt="" /></a>
             <h1>
                 <strong>
-                    Evolution of Netflix contents (2016-2021)</strong>
+                    The Effect of COVID-19 and the Significance of Vaccination</strong>
             </h1>
-            <a href="#one" style="color:#ff0000" class="noBorder project2">Goal</a><br />
-            <a href="#two" style="color:#ff0000" class="noBorder project2">Main Questions</a><br />
-            <a href="#three" style="color:#ff0000" class="noBorder project2">Reports</a><br />
-            <a href="#four" style="color:#ff0000" class="noBorder project2">Conclusions</a><br />
-            <a href="#five" style="color:#ff0000" class="noBorder project2">Database Description</a><br />
-            <a href="#six" style="color:#ff0000" class="noBorder project2">Technologies Used</a><br />
-            <a href="#seven" style="color:#ff0000" class="noBorder project2">More Details</a>
+            <a href="#one" style="color:#6ab6f3" class="noBorder project3">Goal</a><br />
+            <a href="#two" style="color:#6ab6f3" class="noBorder project3">Main Questions</a><br />
+            <a href="#three" style="color:#6ab6f3" class="noBorder project3">Reports</a><br />
+            <a href="#four" style="color:#6ab6f3" class="noBorder project3">Conclusions</a><br />
+            <a href="#five" style="color:#6ab6f3" class="noBorder project3">Database Description</a><br />
+            <a href="#six" style="color:#6ab6f3" class="noBorder project3">Technologies Used</a><br />
+            <a href="#seven" style="color:#6ab6f3" class="noBorder project3">More Details</a>
         </div>
     </header>
     <!-- Main -->
-    <div id="main">
-        <a href="portfolio.html" class="button big icon solid fa-arrow-left project2" style="margin-bottom: 30px;"> Go
+    <div id="main" style="max-width: 70em;">
+        <a href="portfolio.html" class="button big icon solid fa-arrow-left project3" style="margin-bottom: 30px;"> Go
             back to portfolio</a>
         <section id="one">
             <header class="major underline">
                 <h2 style="margin-bottom: 3px">Goal</h2>
             </header>
             <p>
-                Netflix is an American subscription video on-demand streaming service and production company. The main
-                goal is to find
-                out how Netflix’s content changed over time (2016-2021) and what content Netflix has available based on
-                rating
-                and category.
+                The goal of this project is to assess the impact of COVID-19 globally, with a specific focus on
+                Portugal, and to investigate the role of vaccination in reducing COVID-19 deaths.
+                To achieve this goal, the project will analyze data on COVID-19 cases and deaths worldwide, and in
+                Portugal specifically, over time. The project will also analyze data on vaccination rates in Portugal
+                and investigate the relationship between vaccination and COVID-19 deaths.
+
             </p>
         </section>
 
@@ -56,132 +57,93 @@
                 <h2 style="margin-bottom: 3px">Main Questions</h2>
             </header>
             <ol>
-                <li>Have the proportion between TV shows and movies changed? </li>
+                <li> What’s the global impact of COVID-19, including the number of confirmed cases and fatalities? </li>
 
                 <li>
-                    Is Netflix new content actually new?
+                    Did Portugal implement effective measures to control the Covid-19 pandemic, or did it experience a
+                    high number of cases and deaths?
                 </li>
 
                 <li>
-                    What are the most popular categories?
+                    Has Portugal administered COVID-19 vaccines to a higher percentage of its population than the global
+                    average? Additionally, what is the total number of vaccines distributed in Portugal and how many
+                    individuals have been vaccinated thus far?
                 </li>
 
                 <li>
-                    Does Netflix include contents for every age-group ?
+                    What has been the impact of the COVID-19 vaccination campaign on reducing COVID cases and deaths in
+                    Portugal?
                 </li>
             </ol>
         </section>
-        <section id="three">
+        <section id="three" style="margin-bottom: 30px;">
             <header class="major underline">
                 <h2 style="margin-bottom: 3px">
                     Reports
+                    <a class="button small project3" href="./covid.html" target="_blank"
+                        style="float: right; cursor: pointer; font-size: 0.4em;">
+                        show report full screen
+                    </a>
                 </h2>
             </header>
             <h5><i>The following reports are interactive. Use a computer or landscape mode for optimal viewing
                     experience.</i></h5>
-            <canvas id="amarelo"></canvas>
-            <canvas id="laranja" style="margin-top: 40px;"></canvas>
-            <button class="button small project2" style="min-width: 6em;background-color: #cbcbcb40;"
-                onclick="reset()">Reset</button>
-            <button class="button small project2" onclick="newDataSet()">Show New</button>
-            <button class="button small project2" onclick="oldDataSet()">Show Old</button>
-            <canvas id="rosa" style="margin-top: 40px;"></canvas>
-            <button class="button small project2" style="min-width: 6em;background-color: #cbcbcb40;"
-                onclick="resetRosa()">Total Shows</button>
-            <button class="button small project2" onclick="movieRosa()">Movies</button>
-            <button class="button small project2" onclick="tvRosa()">TV Shows</button>
-            <canvas id="verde" style="margin-top: 40px;"></canvas>
-            <header class="major underline">
-                <h4 style="margin-bottom: 3px; font-size: 1.8em;">
-                    More details
-                    <button class="button small project2" onclick="showmoredetailsverde()"
-                        style="float: right; cursor: pointer; font-size: 0.45em;">
-                        show more
-                    </button>
-                </h4>
-            </header>
-            <table id='tabelaverde' style="margin-top: 30px; display:none">
-                <thead>
-                    <tr>
-                        <th>Rating</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>TV-G/G</td>
-                        <td>General Audience</td>
-                    </tr>
-                    <tr>
-                        <td>PG/TV-PG</td>
-                        <td>Parental Guidance Suggested</td>
-                    </tr>
-                    <tr>
-                        <td>PG-13/TV-14</td>
-                        <td> Parents Strongly Cautioned</td>
-                    </tr>
-                    <tr>
-                        <td>TV-Y</td>
-                        <td>All Children
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>TV-Y7</td>
-                        <td>Directed to Older Children</td>
-                    </tr>
-                    <tr>
-                        <td>TV-Y7-FV</td>
-                        <td>Directed to Older Children - Fantasy Violence</td>
-                    </tr>
-                    <tr>
-                        <td>TV-MA</td>
-                        <td>Contains content that may be unsuitable for children</td>
-                    </tr>
-                    <tr>
-                        <td>NC-17</td>
-                        <td>No children under seventeen admitted</td>
-                    </tr>
-                    <tr>
-                        <td>R</td>
-                        <td>Restricted, Children Under 17 Require Accompanying Parent or Adult Guardian
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>UR/NR</td>
-                        <td>Unrated/ Not Rated
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
 
+
+            <iframe title="Deaths per 100k cases " aria-label="Map" id="datawrapper-chart-w0tML" src="./covid.html"
+                scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="650"
+                data-external="1"> </iframe>
         </section>
         <section id="four">
             <header class="major underline">
-                <h2 style="margin-bottom: 3px">Conclusions</h2>
+                <h2 style="margin-bottom: 3px ">Conclusions</h2>
             </header>
             <ol>
                 <li class="spacedItem">
-                    Netflix has consistently expanded its content offerings over time. A recurring characteristic of its
-                    library is the imbalance between movies and TV shows, as there are always more movies than TV shows
-                    available on the platform.
+                    The global impact of COVID-19 has been substantial, with 669,111,131 confirmed cases and 6,842,436
+                    fatalities reported worldwide. This pandemic has significantly affected various aspects of life,
+                    including healthcare systems, economies, education, and social interactions.
+                    One of the ways we can visualize the global impact of COVID-19 is through the map charts in the
+                    report. These demonstrate that countries with the highest number of confirmed cases are not
+                    necessarily the ones with the highest number of deaths. The variations may be due to several
+                    factors, such as differences in healthcare systems, population demographics, and government
+                    responses.
                 </li>
                 <li class="spacedItem">
-                    The majority of TV shows on Netflix were not added to the platform in the year they were originally
-                    released. The majority of older content on the platform, however, are movies. <br />
-                    The addition of new content to Netflix has seen steady growth until 2020, but there was a noticeable
-                    drop in releases in 2021.
+                    Portugal has been significantly impacted by COVID-19, with 54,207 confirmed cases reported for every
+                    100,000 inhabitants. However, the fatality rate per 100,000 cases is comparatively low, with only
+                    469 deaths reported.
+                    While the number of cases reported in Portugal is concerning, it is essential to note that the
+                    fatality rate may be influenced by several factors, such as the country's healthcare system, age
+                    demographics, and government response. Nonetheless, the Portuguese government has implemented
+                    several measures to mitigate the impact of COVID-19, including vaccination campaigns, social
+                    distancing protocols, and the mandatory use of masks in public spaces.
+                    We can confirm that there were two peaks in COVID-19 cases: one after the holiday season of 2020, as
+                    families gathered together, and another in 2022, when measures to prevent the spread of the virus
+                    were reduced. It's likely that the number of cases began to increase at a slower rate because
+                    testing has decreased since the summer of 2022.
                 </li>
                 <li class="spacedItem">
-                    Netflix offers a diverse range of content, divided into approximately 40 categories. Drama, Comedy,
-                    and Action-Adventure are the most prevalent categories across all content on the platform. However,
-                    if we delve deeper, we find that Documentaries are the third most popular movie category, while
-                    Crime is the third most popular TV show category.
+                    Portugal has surpassed the global average in terms of COVID-19 vaccine administration, with an
+                    impressive rate of 95,228 out of every 100,000 people vaccinated, compared to the global average of
+                    only 10,478 out of every 100,000 people. It is worth noting that global values are calculated based
+                    only on countries for which there is available data.
+
+                    Moreover, the total number of COVID-19 vaccines administered in Portugal is 28,106,464, covering
+                    9,779,388 individuals. This suggests that, on average, each person has received about three vaccine
+                    doses.
                 </li>
                 <li class="spacedItem">
-                    Netflix provides content for audiences of all ages. However, only 3% of the content is labeled as
-                    suitable for a general audience, indicating that it may not be the ideal platform for those seeking
-                    content specifically for children.
+                    The data presented in the report charts suggests that as the number of vaccinated individuals
+                    increases, the curve on the death charts slows down. This observation may indicate that the
+                    vaccination campaign in Portugal has been successful in reducing the impact of COVID-19 on the
+                    population.
+
+                    However, it is important to note that there may be other factors at play, such as changes in
+                    government policies or improvements in healthcare systems.
                 </li>
+                <i>It is important to note that the numbers provided have changed since the knowledge cutoff date, as
+                    the pandemic continues to evolve and affect people globally.</i>
             </ol>
         </section>
         <section id="five">
@@ -190,35 +152,31 @@
             </header>
             <ul>
                 <li>
-                    <strong class="subtitle">Database name: </strong>Netflix Movies and TV Shows
+                    <strong class="subtitle">Database name: </strong>OWID-COVID-Data
                 </li>
                 <li>
-                    <strong class="subtitle">Database description: </strong>Netflix is one of the most popular media and
-                    video streaming platforms. They have over 8000 movies or tv shows available
-                    on their platform, as of mid-2021, they have over 200M Subscribers globally. This tabular dataset
-                    consists of listings
-                    of all the movies and tv shows available on Netflix, along with details such as - <i>cast,
-                        directors, ratings, release
-                        year, duration, etc.</i>
+                    <strong class="subtitle">Database description: </strong>: This complete COVID-19 dataset is a
+                    collection of the COVID-19 data maintained by Our World in Data. It is updated daily and includes
+                    data on confirmed cases, deaths, hospitalizations, and testing.</i>
 
                 </li>
                 <li>
-                    <strong class="subtitle">Database Source: </strong>Kaggle
+                    <strong class="subtitle">Database Source: </strong>Our World in Data
                 </li>
                 <li>
                     <strong class="subtitle">Database link:
-                    </strong>https://www.kaggle.com/datasets/shivamb/netflix-shows
+                    </strong>https://ourworldindata.org/covid-deaths
                 </li>
                 <li>
                     <strong class="subtitle">Data Structure: </strong>Single
                     table
                 </li>
                 <li>
-                    <strong class="subtitle"># of records: </strong>8807
+                    <strong class="subtitle"># of records: </strong>259147
                 </li>
-                <li><strong class="subtitle"># of fields: </strong>12</li>
-                <li><strong class="subtitle">Download Date*: </strong>06/02/2023 <i>*(this database is updated and might
-                        have some changes depending on the date)</i></li>
+                <li><strong class="subtitle"># of fields: </strong>67</li>
+                <li><strong class="subtitle">Download Date*: </strong>24/02/2023 <i>*(this database is updated
+                        daily)</i></li>
                 <li><strong class="subtitle">File type: </strong>CSV</li>
             </ul>
         </section>
@@ -229,7 +187,7 @@
             </header>
             <div class="technologies">
                 <img class="tec" title="Excel" src="images/tec/excelSVG.svg" />
-                <img class="tec" style="height: 47px" title="ChartJS" src="images/tec/chartjsSVG.SVG.svg" />
+                <img class="tec" style="height: 47px" title="ChartJS" src="images/tec/data-wrapper.png" />
                 <img style="height: 47px" class="tec" title="MS SQL" src="images/tec/sql-database-generic.svg" />
             </div>
         </section>
@@ -237,7 +195,7 @@
             <header class="major underline">
                 <h2 style="margin-bottom: 3px">
                     More details
-                    <button class="button small project2" onclick="showmoredetails()"
+                    <button class="button small project3" onclick="showmoredetails()"
                         style="float: right; cursor: pointer; font-size: 0.4em;">
                         show more
                     </button>
@@ -247,137 +205,130 @@
                 <div style="margin-left: 20px;">
                     <h5>Data cleaning: </h5>
                     <ul>
-                        <li>
-                            <strong class="subtitle">MS Excel</strong>
+                        <strong class="subtitle">MS Excel</strong>
+                        <li>Remove fields that were not considered in this study, such as gender, age, testing, etc.
                         </li>
-                        <p>
-                            Start by removing columns with information that is not relevant for the goal (cast,
-                            director).<br /><strong>Column: <i>show_id</i></strong> <br />Remove 's' from the value in
-                            order
-                            to obtain
-                            an integer <br />
-                            <strong>Column: <i>type_id</i></strong><br />
-                            Using the function IFS substitute the type for it's corresponding type_id<br />
-                            <strong>Column: <i>date_added</i></strong><br />
-                            Change the date format to YYYY-MM-DD in order to be compatible with SQL<br />
-                            <strong>Column: <i>rating_id</i></strong><br />
-                            Select distinct values. Turn distinct values with the same meaning into one value <i>ex:
-                                TV-G/G</i>. Order ratings by age ascending. Create a number key for each
-                            distinct_value(rating_id). Replace each rating
-                            with it's corresponding id.<br />
-                            <strong>Column: <i>duration</i></strong><br />
-                            Sort a copy of the database by type_id. Divide between movies and TV shows. Remove min,
-                            seasons, season from the values. Clean the duration column. Create a column named
-                            no_of_seasons. Copy the values of duration and no of seasons to it's corresponding columns.
-                            Sort by show_id.<br />
-                            <strong>Column: <i>categories</i></strong><br />
-                            Split the listed_in column into the different categories(columns:category1_id, category2_id
-                            and category3_id). Replace the categories by they corresponding value in the categories
-                            table.
-
-                        </p>
-
+                        <li>Change the date format to YYYY-MM-DD to be compatible with SQL.
+                        <li>Divide the single table into two distinct tables: one for vaccination data and the other
+                            for cases and deaths data.</li>
+                        <li>Replace null values in the fields “total_cases,” “new_cases,” “total_deaths,” and
+                            “new_deaths” with 0.</li>
+                        <p></p>
+                        <strong class="subtitle ">MS SQL Server</strong>
+                        <li>Remove all rows with null values for the following fields in the vaccination table:
+                            “total_vaccinations,” “people_vaccinated,” “people_fully_vaccinated,” “total_boosters,”
+                            and “new_vaccinations.” Since our database includes dates from the beginning of the
+                            pandemic when vaccines were not yet available, many of these fields were not applicable
+                            or did not have data. Removing these rows will ensure that the data we analyse is
+                            accurate and relevant to our study.</li>
+                        <li>Remove all rows with null values in the “continent” field for both the vaccination table
+                            and the cases and deaths table. This is necessary because some location values like
+                            "Upper middle income" and "Africa" are not specific enough to be classified as a
+                            location and all odd location values have null values in the “continent field”.</li>
+                        <li>Remove all rows with null values in the following fields from the cases_and_deaths
+                            table: “total_cases,” “new_cases,” “total_deaths,” and “new_deaths”. By removing rows
+                            with null values, we will have a dataset with only significant values, allowing us to
+                            draw more accurate conclusions from our analysis.</li>
                     </ul>
-                    <h5>Database design: </h5>
-                    <a href="images/projects/netflixdiagram.svg" style="width: 100%;" class="image thumb removeBefore"
-                        target="_blank"><img style="width: 100%;" src="images/projects/netflixdiagram.svg" /></a>
-
 
                     <h5>SQL queries: </h5>
                     <pre><code>
-        -- select no of shows by type and by year--
+USE covid19;
 
-            SELECT 
-                YEAR(nt.date_added),
-                t.type_name,
-                COUNT(nt.show_id) 
-            FROM dbo.netflix_titles AS nt
-                LEFT JOIN dbo.types AS t
-                    ON (nt.type_id=t.type_id)
-            GROUP BY 
-                YEAR(nt.date_added),
-                t.type_name
-            ORDER BY 
-                 YEAR(nt.date_added) ASC;
-                        
-                        
-        -- select from all content the amount that was added on its release year --
-                        
-            SELECT
-                YEAR(nt.date_added),
-                t.type_name,
-                COUNT(CASE
-                        WHEN nt.release_year=YEAR(nt.date_added) 
-                            THEN 1 
-                        END) AS new_content,
-                COUNT(nt.show_id) AS total_content		
-            FROM dbo.netflix_titles AS nt
-                LEFT JOIN dbo.types AS t
-                    ON (nt.type_id=t.type_id)
-            GROUP BY 
-                YEAR(nt.date_added),
-                t.type_name
-            ORDER BY 
-                YEAR(nt.date_added) ASC;
-                        
-                        
-        -- select no of movies per category--
-                        
-                        
-            DECLARE @Category INT 
-            SET @Category=1
-            WHILE ( @Category <= 48)
-            BEGIN
-                SELECT
-                    @Category AS category_id,
-                    SUM(CASE 
-                        WHEN category1_id = @Category OR category2_id = @Category 
-                            OR category3_id = @Category  THEN 1 
-                        ELSE 0 
-                        END) AS no_of_movies
-                FROM dbo.netflix_titles
-                WHERE type_id=1
-                SET @Category = @Category + 1
-             END;
-                        
-                        
-        -- select no of tv shows per category--
-                        
-                        
-            DECLARE @Category INT 
-            SET @Category=1
-            WHILE ( @Category <= 48)
-            BEGIN
-                SELECT
-                    @Category AS category_id,
-                    SUM(CASE 
-                        WHEN category1_id = @Category OR category2_id = @Category 
-                            OR category3_id = @Category  THEN 1 
-                        ELSE 0 
-                        END) AS no_of_tvshows
-                FROM dbo.netflix_titles
-                WHERE type_id=2
-                SET @Category = @Category + 1
-            END;
-                            
-                        
-        -- select shows by type,rating and year --
-                        
-            SELECT
-                YEAR(nt.date_added),
-                r.rating,
-                COUNT(CASE 
-                        WHEN nt.type_id=1 THEN 1 END) as no_of_movies,
-                COUNT(CASE 
-                        WHEN nt.type_id=2 THEN 1 END) as no_of_tvshows
-            FROM dbo.netflix_titles AS nt
-                LEFT JOIN dbo.ratings AS r
-                    ON (nt.rating_id=r.ratings_id)
-            GROUP BY 
-                YEAR(nt.date_added),
-                 r.rating
-            ORDER BY 
-                YEAR(nt.date_added) ASC;</code></pre>
+-- List of countries --
+SELECT 
+	Distinct(location)
+FROM dbo.cases_and_deaths;
+
+-- Total cases and deaths by location --
+
+SELECT
+	location,
+	total_cases,
+	total_deaths
+FROM dbo.cases_and_deaths
+WHERE date IN
+	(SELECT MAX(date)
+	FROM dbo.cases_and_deaths)
+ORDER BY location ASC;
+
+-- Portugal cases and deaths through the time --
+
+SELECT 
+	date,
+	total_cases,
+	total_deaths
+FROM dbo.cases_and_deaths
+WHERE location = 'Portugal'
+ORDER BY date ASC;
+
+-- Total global (excluding Portugal) cases through the time --
+
+SELECT 
+	date,
+	SUM(total_cases) as cases_global,
+	SUM(total_deaths) as deaths_global
+FROM dbo.cases_and_deaths
+WHERE location <> 'Portugal'
+GROUP by date
+ORDER BY date ASC;
+
+-- People vaccinated in Portugal through the time  --	
+SELECT
+	date,
+	people_vaccinated
+FROM dbo.vaccination
+WHERE location = 'Portugal'
+ORDER BY date ASC;
+
+-- People vaccinated globally (excluding Portugal) through the time --
+
+SELECT 
+	date,
+	SUM(people_vaccinated) as total_global
+FROM dbo.vaccination
+WHERE location <> 'Portugal'
+GROUP by date
+ORDER BY date ASC;
+
+-- Total of vaccines distributed in Portugal --
+
+SELECT 
+	date,
+	total_vaccinations 
+FROM dbo.vaccination
+WHERE 
+	location = 'Portugal' AND
+	date IN 
+		(SELECT 
+			MAX(date)
+		FROM dbo.vaccination
+		WHERE location = 'Portugal');
+
+-- Total of people vaccinated in Portugal --
+
+SELECT 
+	date,
+	people_vaccinated
+FROM dbo.vaccination
+WHERE 
+	location = 'Portugal' AND
+	date IN 
+		(SELECT 
+			MAX(date)
+		FROM dbo.vaccination
+		WHERE location = 'Portugal');
+
+-- People vaccinated globally by location excluding Portugal --
+SELECT
+	location,
+	MAX(people_vaccinated)
+FROM dbo.vaccination 
+WHERE location <> 'Portugal'
+GROUP BY location
+ORDER BY location;
+
+        </code></pre>
 
                 </div>
             </div>
