@@ -11,6 +11,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+
 </head>
 
 <body class="is-preload">
@@ -187,7 +191,7 @@
             </header>
             <div class="technologies">
                 <img class="tec" title="Excel" src="images/tec/excelSVG.svg" />
-                <img class="tec" style="height: 47px" title="ChartJS" src="images/tec/data-wrapper.png" />
+                <img class="tec" style="height: 47px" title="Data Wrapper" src="images/tec/data-wrapper.png" />
                 <img style="height: 47px" class="tec" title="MS SQL" src="images/tec/sql-database-generic.svg" />
             </div>
         </section>
@@ -358,6 +362,13 @@ ORDER BY location;
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
     <script src="assets/js/main.js"></script>
     <script>
         function showmoredetails() {
