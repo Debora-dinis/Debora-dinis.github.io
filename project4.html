@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Débora Dinis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+    <header id="header" style="
+                background-size: cover;
+                background-image: url('images/overlay.png'),
+                    url('images/projects/airbnbseatleblur.png');
+            ">
+        <div class="inner">
+            <a href="#" class="image avatar"><img src="images/projects/airbnbseatle.png" alt="" /></a>
+            <h1>
+                <strong>Seattle AirBnB Analysis: Unlocking Insights for Hosts
+                </strong>
+            </h1>
+            <a href="#one" style="color:white" class="noBorder project4">Goal</a><br />
+            <a href="#two" style="color:white" class="noBorder project4">Client properties details</a><br />
+            <a href="#three" style="color:white" class="noBorder project4">Main Questions</a><br />
+            <a href="#four" style="color:white" class="noBorder project4">Reports</a><br />
+            <a href="#five" style="color:white" class="noBorder project4">Conclusions</a><br />
+            <a href="#six" style="color:white" class="noBorder project4">Database Description</a><br />
+            <a href="#seven" style="color:white" class="noBorder project4">Technologies Used</a><br />
+            <a href="#eight" style="color:white" class="noBorder project4">More Details</a>
+        </div>
+    </header>
+    <!-- Main -->
+    <div id="main" style="max-width: 70em;">
+        <a href="portfolio.html" class="button big icon solid fa-arrow-left project4" style="margin-bottom: 30px;"> Go
+            back to portfolio</a>
+        <section id="one">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Goal</h2>
+            </header>
+            <p>
+                The client has two properties in Seattle and wants to determine the optimal listing strategy for each
+                property on Airbnb. This project aims to analyse the distribution of Airbnb listings in Seattle,
+                including pricing and property characteristics, to provide insights on when and which property to list
+                on Airbnb.
+
+            </p>
+        </section>
+        <section id="two" style="margin-bottom:30px;">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Client properties details</h2>
+            </header>
+            <img src="images/projects/propertiesdetails.png" />
+            <p>
+                Emily worked hard and stayed committed to her goal of owning two beautiful homes in Seattle. Her efforts
+                paid off, and she finally achieved her goal. She owned one property in the lovely Queen Anne
+                neighborhood, which had six bedrooms and four bathrooms, and another in Delridge, which had four
+                bedrooms and 3.5 bathrooms.
+                As Emily's circumstances changed, she decided to put one of her homes on AirBnB and focus on enjoying
+                the other. However, Emily faced a challenging decision: which property should she list? Both homes had
+                unique features and advantages, making it difficult for her to determine which one would be more
+                beneficial.
+
+            </p>
+            <b><i>Disclaimer: The client and any properties associated with them mentioned or described in this project
+                    are entirely fictional and have been created solely to complete this project. However, all the
+                    information analyzed in this project regarding Airbnb listings in Seattle during the year 2016 is
+                    factual. </i></b>
+        </section>
+        <section id="three">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Main Questions</h2>
+            </header>
+            <ol>
+                <li>What is the distribution of listings in Seattle as well as the average price per listing for each
+                    corresponding zip code? </li>
+
+                <li>What is the correlation between the number of bedrooms and the price of the listing?</li>
+
+                <li>Are there similarities between the listings producing high revenue and Emily’s properties?</li>
+
+                <li>What is the pattern of revenue changes throughout the year in Seattle, and during which season is it
+                    optimal to list a property on Airbnb in Seattle?</li>
+            </ol>
+        </section>
+        <section id="four" style="margin-bottom: 30px;">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">
+                    Reports
+                </h2>
+            </header>
+            <h5><i>The following reports are interactive. Use a computer or landscape mode for optimal viewing
+                    experience.</i></h5>
+            <div class='tableauPlaceholder' id='viz1678393725806' style='position: relative'><noscript><a href='#'><img
+                            alt='Painel 1 '
+                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Projectsreports&#47;Painel1&#47;1_rss.png'
+                            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='Projectsreports&#47;Painel1' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image'
+                        value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Projectsreports&#47;Painel1&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='pt-BR' />
+                    <param name='filter' value='publish=yes' />
+                </object></div>
+            <h3 style="margin-top: 30px;">High-revenue listings property details</h3>
+            <script
+                type='text/javascript'>                    var divElement = document.getElementById('viz1678393725806'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            <iframe title="Details of high-revenue listings" aria-label="Map" id="datawrapper-chart-w0tML"
+                src="./airbnblisting.html" scrolling="yes" frameborder="0"
+                style="width: 0; min-width: 80% !important; border: none;" height="750" data-external="1"> </iframe>
+        </section>
+        <section id="five" style="margin-bottom: 30px;">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px ">Conclusions</h2>
+            </header>
+            <ol>
+                <li class="spacedItem">
+                    In terms of Airbnb listings, Delridge has a smaller number of options available, and the average
+                    price per listing is $82.1. In contrast, Queen Anne has a higher concentration of listings, but the
+                    average price per listing is $166.4.
+                </li>
+                <li class="spacedItem">
+                    Properties that offer 6 bedrooms are listed at an average price of $578.2, which is significantly
+                    higher than the average listing price of $313.7 for places with 4 bedrooms.
+                </li>
+                <li class="spacedItem">
+                    Given that Emily's property shares many similarities with the listing named "New Modern House -
+                    Amazing Water View," such as a close location, modern design, and comparable size (except Emily's
+                    additional room), it is reasonable to compare the two properties and to assume that Emily’s property
+                    has real potential on Airbnb.
+                </li>
+                <li class="spacedItem">
+                    Our revenue data shows two distinct peaks - one during the summer and the other in December. It is
+                    reasonable to assume that these peaks are caused by families going on vacation during the summer
+                    months or visiting family members during the Christmas holidays.
+                </li>
+                While Emily loves both properties, based on the data presented, it appears reasonable to conclude that
+                listing the Queen Anne property is a wise decision that will allow her to focus on enjoying her other
+                home while securing a good return on her investment.
+
+            </ol>
+            <b><i>Disclaimer: The client and any properties associated with them mentioned or described in this project
+                    are entirely fictional and have been created solely to complete this project. However, all the
+                    information analyzed in this project regarding Airbnb listings in Seattle during the year 2016 is
+                    factual. </i></b>
+        </section>
+        <section id="six">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Database</h2>
+            </header>
+            <ul>
+                <li>
+                    <strong class="subtitle">Database name: </strong> Airbnb Listings 2016 Dataset
+                </li>
+                <li>
+                    <strong class="subtitle">Database description: </strong>Dataset of 2016 Airbnb public listings data
+
+                </li>
+                <li>
+                    <strong class="subtitle">Database Source: </strong>Kaggle
+                </li>
+                <li>
+                    <strong class="subtitle">Database link:
+                    </strong>https://www.kaggle.com/datasets/alexanderfreberg/airbnb-listings-2016-dataset
+                </li>
+                <li>
+                    <strong class="subtitle">Data Structure: </strong>Multiple
+                    tables
+                </li>
+                <li>
+                    <strong class="subtitle"># of records: </strong>1137242
+                </li>
+                <li><strong class="subtitle"># of fields: </strong>102</li>
+                <li><strong class="subtitle">Download Date*: </strong>08/03/2023 <i>*(this database might be
+                        updated)</i></li>
+                <li><strong class="subtitle">File type: </strong>CSV</li>
+            </ul>
+        </section>
+        <!-- One -->
+        <section id="seven">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">Technologies Used</h2>
+            </header>
+            <div class="technologies">
+                <img class="tec" title="Excel" src="images/tec/excelSVG.svg" />
+                <img class="tec" style="height: 47px" title="Tableau" src="images/tec/TableauSVG.svg" />
+            </div>
+        </section>
+        <section id="eight">
+            <header class="major underline">
+                <h2 style="margin-bottom: 3px">
+                    More details
+                    <button class="button small project4" onclick="showmoredetails()"
+                        style="float: right; cursor: pointer; font-size: 0.4em;">
+                        show more
+                    </button>
+                </h2>
+            </header>
+            <div id="hiddenDiv" style="display: none">
+                <div style="margin-left: 20px;">
+                    <h5>Data cleaning: </h5>
+                    <ul>
+                        <strong class="subtitle">MS Excel</strong>
+                        <li>Delete the "Reviews" table since that was not analysed in this project.
+                        </li>
+                        <li>Remove columns associated with host information, URL, scrapping process, images, etc. Since
+                            they are not relevant to this project and make it easier to find the measures and dimensions
+                            that are relevant in Tableau.</li>
+                        <p></p>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li>
+                    <a title="LinkedIn Profile" target="_blank"
+                        href="https://www.linkedin.com/in/d%C3%A9bora-dinis-12b832258"
+                        class="icon brands fa-linkedin project4"><span class="label">Twitter</span></a>
+                </li>
+                <li>
+                    <a title="Copy email" href="#" onclick="copy()" class="icon solid fa-envelope project4"><span
+                            class="label">Email</span></a>
+                </li>
+                <li>
+                    <a title="Download CV" href="cv.pdf" download target="_blank"
+                        class="icon solid fa-ambulance project4"><span class="label">CV</span></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        function showmoredetails() {
+            const hiddenDiv = document.getElementById("hiddenDiv");
+            if (hiddenDiv.style.display === "none")
+                hiddenDiv.style.display = "block";
+            else hiddenDiv.style.display = "none";
+        }
+        function showmoredetailsverde() {
+            const hiddenDiv = document.getElementById("tabelaverde");
+            if (hiddenDiv.style.display === "none")
+                hiddenDiv.style.display = "block";
+            else hiddenDiv.style.display = "none";
+        }
+    </script>
+    <script>
+        async function copy() {
+            await navigator.clipboard.writeText("debora.dinis99@gmail.com");
+            alert("Email debora.dinis99@gmail.com copied to clipboard");
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+</body>
+
+</html>
