@@ -3276,3 +3276,8 @@ input, select, textarea {
 	border-color: #EC5049;
     color: #EC5049!important;
 }
+
+.project5:hover {
+	border-color: #08abb1;
+    color: #08abb1!important;
+}
