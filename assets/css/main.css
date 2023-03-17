@@ -3281,3 +3281,14 @@ input, select, textarea {
 	border-color: #08abb1;
     color: #08abb1!important;
 }
+
+.skills {
+	height: 120px;
+	margin-block: 50px;
+	margin-inline: 20px;
+}
+
+.flex-style {
+	display: flex;
+	width: 100%;
+}
